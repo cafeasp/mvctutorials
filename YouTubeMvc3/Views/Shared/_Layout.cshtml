@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet" type="text/css" />
+		<!--[if lte IE 8]><script src="../../Content/js/html5shiv.js"></script><![endif]-->
+		<script src="../../Content/js/jquery.min.js"></script>
+		<script src="../../Content/js/jquery.dropotron.js"></script>
+		<script src="../../Content/js/skel.min.js"></script>
+		<script src="../../Content/js/skel-panels.min.js"></script>
+    <script src="../../Content/js/init.js" type="text/javascript"></script>
+		<noscript>
+			<link rel="stylesheet" href="../../Content/css/skel-noscript.css" />
+			<link rel="stylesheet" href="../../Content/css/style.css" />
+			<link rel="stylesheet" href="../../Content/css/style-n1.css" />
+		</noscript>
+    <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
+</head>
+<body class="homepage">
+    
+		<!-- Header Wrapper -->
+			<div id="header-wrapper">
+						
+				<!-- Header -->
+					<div id="header" class="container">
+						
+						<!-- Logo -->
+							<h1 id="logo"><a href="index.html">Cafeasp</a></h1>
+						
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li>
+										<a href="">Dropdown</a>
+										<ul>
+											<li><a href="#">Lorem ipsum dolor</a></li>
+											<li><a href="#">Magna phasellus</a></li>
+											<li><a href="#">Etiam dolore nisl</a></li>
+											<li>
+												<span>Phasellus consequat</span>
+												<ul>
+													<li><a href="#">Lorem ipsum dolor</a></li>
+													<li><a href="#">Phasellus consequat</a></li>
+													<li><a href="#">Magna phasellus</a></li>
+													<li><a href="#">Etiam dolore nisl</a></li>
+												</ul>
+											</li>
+											<li><a href="/Home/Members">Members</a></li>
+										</ul>
+									</li>
+									<li>@Html.Partial("_LogOnPartial")</li>
+									<li class="break"><a href="/Home/About">Create Roles</a></li>
+									<li><a href="no-sidebar.html">No Sidebar</a></li>
+								</ul>
+							</nav>
+
+					</div>
+
+				<!-- Hero -->
+					<section id="hero" class="container">
+						<header>
+							<h2>mobilegeotracker.com<br />
+							site template by <a href="http://html5up.net/">HTML5 UP</a></h2>
+						</header>
+						<p>Designed and built on <a href="http://skeljs.org">skelJS</a> by <a href="http://n33.co">AJ</a>. Released for free under<br />
+						the <a href="http://html5up.net/license/">Creative Commons Attribution 3.0 license</a>.</p>
+						<ul class="actions">
+							<li><a href="#" class="button">Get this party started</a></li>
+						</ul>
+					</section>
+
+			</div>
+@RenderBody()
+	
+		<!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+
+				<!-- Footer -->
+					<div id="footer" class="container">
+						<header class="major">
+							<h2>Euismod aliquam vehicula lorem</h2>
+							<span>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel sem sit<br />
+							dolor neque semper magna lorem ipsum feugiat veroeros lorem ipsum dolore.</span>
+						</header>
+						<div class="row">
+							<section class="6u">
+								<form method="post" action="#">
+									<div class="row half">
+										<div class="6u">
+											<input name="name" placeholder="Name" type="text" class="text" />
+										</div>
+										<div class="6u">
+											<input name="email" placeholder="Email" type="text" class="text" />
+										</div>
+									</div>
+									<div class="row half">
+										<div class="12u">
+											<textarea name="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<div class="row half">
+										<div class="12u">
+											<ul class="actions">
+												<li><a href="#" class="button">Send Message</a></li>
+												<li><a href="#" class="button">Clear Form</a></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+							<section class="6u">
+								<div class="row no-collapse-1">
+									<ul class="divided icons 6u">
+										<li class="icon icon-twitter"><a href="#"><span class="extra">twitter.com/</span>untitled</a></li>
+										<li class="icon icon-facebook"><a href="#"><span class="extra">facebook.com/</span>untitled</a></li>
+										<li class="icon icon-dribbble"><a href="#"><span class="extra">dribbble.com/</span>untitled</a></li>
+									</ul>
+									<ul class="divided icons 6u">
+										<li class="icon icon-linkedin"><a href="#"><span class="extra">linkedin.com/</span>untitled</a></li>
+										<li class="icon icon-youtube"><a href="#"><span class="extra">youtube.com/</span>untitled</a></li>
+										<li class="icon icon-pinterest"><a href="#"><span class="extra">pinterest.com/</span>untitled</a></li>
+									</ul>
+								</div>
+							</section>
+						</div>
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright" class="container">
+						<ul class="menu">
+							<li>&copy; Untitled. All rights reserved.</li>
+							<li>Demo images: <a href="http://ineedchemicalx.deviantart.com/">Felicia Simion</a></li>
+							<li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+
+</body>
+</html>

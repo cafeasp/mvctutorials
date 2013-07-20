@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "About Us";
+}
+<div style="text-align: center">
+    @using (Html.BeginForm())
+    {
+        <label>Role Name</label><br/>
+        <input type="text" name="roleName"/>
+    
+        <br/>
+        <input type="submit" value="Add"/>
+    }
+</div>
+<hr/>
+
+
+<div style="text-align: center">
+@using (Html.BeginForm("AddUserRole","Home"))
+{
+    <label>User Name</label><br/>
+    <input type="text" name="user"/>
+    
+    <br/>
+    <input type="submit" value="Add"/>
+}
+</div>
