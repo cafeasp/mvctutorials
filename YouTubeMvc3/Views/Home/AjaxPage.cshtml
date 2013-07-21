@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "AjaxPage";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#ajaxCall").click(function () {
+            
+            $.ajax({
+                url: '/Home/MyajaxCall',
+                type: 'Post',
+                dataType: 'json',
+                data: { order: 'Client_Call' },
+                success: function (data) {
+                    //process data from the server
+                    
+                }, error: function (data) {
+                   
+                }
+            });
+            
+        });
+    });
+</script>
+
+<h2>Ajax Page</h2>
+
+<input type="button" id="ajaxCall" value="Get Data"/>

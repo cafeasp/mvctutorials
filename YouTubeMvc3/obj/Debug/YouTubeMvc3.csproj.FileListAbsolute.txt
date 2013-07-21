@@ -6,3 +6,11 @@ C:\Users\Victor.Pacheco\Documents\Visual Studio 2010\Projects\PlayGround\YouTube
 C:\Users\Victor.Pacheco\Documents\Visual Studio 2010\Projects\PlayGround\YouTubeMvc3\YouTubeMvc3\obj\Debug\YouTubeMvc3.dll
 C:\Users\Victor.Pacheco\Documents\Visual Studio 2010\Projects\PlayGround\YouTubeMvc3\YouTubeMvc3\obj\Debug\YouTubeMvc3.pdb
 C:\Users\Victor.Pacheco\Documents\Visual Studio 2010\Projects\PlayGround\YouTubeMvc3\YouTubeMvc3\obj\Debug\YouTubeMvc3.csprojResolveAssemblyReference.cache
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\YouTubeMvc3.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\YouTubeMvc3.pdb
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\EntityFramework.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\System.Web.Providers.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\EntityFramework.xml
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\obj\Debug\YouTubeMvc3.csprojResolveAssemblyReference.cache
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\obj\Debug\YouTubeMvc3.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\obj\Debug\YouTubeMvc3.pdb

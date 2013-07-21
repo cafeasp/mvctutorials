@@ -42,6 +42,16 @@ namespace YouTubeMvc3.Controllers
         }
 
         
+        public ActionResult AjaxPage()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public JsonResult MyajaxCall(string order)
+        {
+            return Json("ok");
+        }
         
     }
 }
