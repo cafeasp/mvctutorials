@@ -1,0 +1,10 @@
+#logo {margin-left:0;width:100%;text-align:center;}        
+
+.home-sections .section .section-title {position:static;width:auto;}
+.home-sections .section .section-title h2 {background:none !important;height:auto;line-height:24px;padding:0;width:auto;text-align:left;margin-bottom:1em;}
+.home-sections .section .section-title h4, .home-sections .section .section-title p {display:none;}
+.home-sections .section .section-content {margin-left:0;}                      
+
+.one-fourth, .one-third, .two-fourth, .two-third {width:100%;float:none;}
+
+table td, table th {padding:5px 10px;}

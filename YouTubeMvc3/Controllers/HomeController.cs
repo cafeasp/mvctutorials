@@ -53,5 +53,9 @@ namespace YouTubeMvc3.Controllers
             return Json("ok");
         }
         
+        public ActionResult FancyBoxExample()
+        {
+            return View();
+        }
     }
 }

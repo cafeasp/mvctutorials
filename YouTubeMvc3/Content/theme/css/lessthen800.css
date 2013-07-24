@@ -1,0 +1,14 @@
+.shadowBg, body, .stretched-layout .bgWrapper {background:none;}
+.wrapper {margin:0 auto;}
+#sidebar {display:none;}
+#primary {width:100%;}
+.last-news .box-post .news_excerpt {display:none !important;}
+#slider {display:none !important;}
+#slider.elastic {display:block !important;}   
+#slider.not-for-mobile {display:none !important;}
+#slider.mobile {display:block !important;}
+.slider-mobile {display:block !important;}
+#respond p {width:auto !important;float:none !important;margin:0 !important;}  
+
+.portfolio-filterable #primary {width:auto;}
+#content .accordion-slider {display:none !important;}

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Fancybox</id>
+    <version>2.1.5</version>
+    <title>Fancybox</title>
+    <authors>Goran Gligorin</authors>
+    <owners>Goran Gligorin</owners>
+    <licenseUrl>http://creativecommons.org/licenses/by-nc/3.0/</licenseUrl>
+    <projectUrl>http://fancyapps.com/fancybox/</projectUrl>
+    <iconUrl>http://fancyapps.com/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages. It is built at the top of the popular JavaScript framework jQuery and is both easy to implement and a snap to customize.</description>
+    <summary>FancyBox licensed under Creative Commons Attribution-NonCommercial 3.0 license. Free non-profit websites. For commercial use see http://sites.fastspring.com/fancyapps/product/store.</summary>
+    <releaseNotes />
+    <copyright />
+    <language>en-US</language>
+    <tags>jquery plugin lightbox fancybox fancyapps</tags>
+    <dependencies>
+      <dependency id="jQuery" version="1.6.1" />
+    </dependencies>
+    <references />
+  </metadata>
+</package>

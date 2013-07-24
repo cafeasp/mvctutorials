@@ -1,0 +1,22 @@
+/* COLOR PICKER */
+#color-picker { display:none; padding:10px; width:110px; position:fixed; line-height: 1; height: 100px; top: 72px; left: -122px; }
+#color-picker, #color-picker .label { -moz-box-shadow: 0 0 5px #000; -webkit-box-shadow: 0 0 5px #000; background-color:#000; border:1px solid #333 } 
+#color-picker a { text-indent:-9999px; display:block; float:left; margin:5px; outline:none }
+#color-picker a.color { width:20px; height:20px }
+#color-picker a.skin { width:51px; height:51px }
+#color-picker .label { padding:10px; cursor:pointer; background:#000 url("../images/icons/gear32.png") no-repeat scroll center; width: 32px; height: 32px; display: block; text-indent: -99999px; outline: medium none; position: absolute; right: -53px; top:-1px !important; border-left:0 }
+#color-picker h5 { font-weight:bold; color:#fff; margin:0.8em 0 0.8em 0.3em; font-size:16px; }
+.colorpicker { z-index:10000; }
+
+/* colors */
+#color-picker a.blue    { background-color:#1f5785 }
+#color-picker a.brown   { background-color:#714f40 }
+#color-picker a.green   { background-color:#99a114 }
+#color-picker a.grey    { background-color:#AFAFAE }
+#color-picker a.pink    { background-color:#8e5b95 }
+#color-picker a.red     { background-color:#b91003 }
+#color-picker a.orange  { background-color:#ce8107 }
+#color-picker a.white   { background-color:#ffffff }
+
+/*no js*/
+.no_js #color-picker { display:none; }

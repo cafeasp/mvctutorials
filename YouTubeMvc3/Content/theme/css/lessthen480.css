@@ -1,0 +1,58 @@
+li.comment ul.children {margin-left:2.5em;}
+.commentNumber {display:none;}
+#comments img.avatar {margin-left:8px;}                                 
+.comment-author {margin-right:5px;width:100px;}
+.comment-meta {margin-left:105px;}
+
+.comment-meta {margin-left:0;border:0;padding:0;}
+#comments img.avatar {display:none;}
+#comments .sphere {display:none;}
+.comment-author {float:none;margin:0;width:auto;}
+#comments .fn {display:inline;}
+.comment-container {padding:20px 20px 10px;}
+#footer {display:none;}
+
+.style-picker {display:none;}
+.for-mobile {display:block !important;}
+.for-not-mobile {display:none !important;}
+
+#content .contact-form {width:100%;}
+#content .contact-form li {float:none;margin-right:0;width:100%;}
+#content .contact-form li.text-field input, #content .contact-form li select, #content .contact-form li textarea {width:90%;} 
+
+#logo {margin-bottom:10px;margin-top:20px;}
+.blog-big .meta p {float:none !important;width:100% !important;}
+#twitter-slider {display:none;}                 
+
+#nav {text-align:center;}                                  
+#nav ul {margin-top:0px;margin-left:20px;}
+#nav ul li {margin-bottom:0;height:auto;line-height:24px;background:none !important;}
+#nav ul li a, #nav ul li a:visited {padding-top:0;}
+#nav .sf-sub-indicator {top:8px;}
+
+.blog-small .thumbnail  {width:82px;}
+.blog-small h1, .blog-small h2 {margin-left:100px;}
+.blog-small .meta {margin-left:0px;}
+.blog-small .thumbnail .date {bottom:auto;left:auto;right:0;top:0;}
+.blog-small .thumbnail img {display:none;}
+.blog-big.post .thumbnail .date {bottom:90px;}
+.blog-big.post .without.thumbnail .date {bottom:0px;}
+.blog-big .thumbnail h1, .blog-big .thumbnail h2 {position:static;padding-left:0;}
+
+.alignleft, img.alignleft, .alignright, img.alignright{float:none;}
+.alignright, img.alignright {margin-left:0;}
+
+.testimonials-list .thumb-testimonial {float:none;margin:0 auto;}
+.testimonials-list .the-post {margin:0;}
+.testimonials-list .thumb-testimonial p {text-align:center;}
+
+.portfolio-post p {margin-left:0;clear:left;}
+
+.box-sections h1, .box-sections h2, .box-sections h3, .box-sections h4, .box-sections h5, .box-sections h6 { clear:both !important; }   
+#content .accordion-slider {display:none !important;}
+
+#portfolio-bigimage .work-thumbnail, #portfolio-bigimage .work-description {float:none;margin-right:0 !important; width:auto;}
+#portfolio-bigimage .work-thumbnail {overflow:hidden;}
+#portfolio-bigimage .work-description {margin-top:20px;}             
+
+table td, table th {padding:2px 4px;}

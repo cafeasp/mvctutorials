@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "FancyBoxExample";
+}
+<div style="margin-left:50px">
+<h2>Fancy Box Example</h2>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".fancybox").fancybox({
+            maxWidth: 800,
+            maxHeight: 600,
+            fitToView: false,
+            width: '70%',
+            height: '70%',
+            autoSize: false,
+            closeClick: false,
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+    });
+</script>
+<a class="fancybox" rel="group" href="/Content/images/pic01.jpg"><img width="200px" height="200px" src="/Content/images/pic01.jpg" alt="" /></a>
+<a class="fancybox" rel="group" href="/Content/images/pic02.jpg"><img width="200px" height="200px" src="/Content/images/pic02.jpg" alt="" /></a>
+    <br/>   
+    <a class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/0nEktCy1uIk?autoplay=1">Youtube (iframe)</a>
+    <br />  <br />  <br /></div>

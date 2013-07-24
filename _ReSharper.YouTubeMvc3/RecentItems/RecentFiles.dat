@@ -1,42 +1,50 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Members.cshtml" caret="68" fromTop="7" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Account/f:Register.cshtml" caret="505" fromTop="11" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:AccountController.cs" caret="0" fromTop="0" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:About.cshtml" caret="440" fromTop="17" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="44" fromTop="1" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/f:Web.config" caret="1539" fromTop="5" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_Layout.cshtml" caret="1611" fromTop="4" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="1146" fromTop="12" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:AjaxPage.cshtml" caret="465" fromTop="15" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:AjaxPage.cshtml" caret="371" fromTop="13" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_Layout.cshtml" caret="0" fromTop="0" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_testLayout.cshtml" caret="132" fromTop="12" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/f:_ViewStart.cshtml" caret="106" fromTop="2" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/f:README.jQuery.vsdoc.txt" caret="0" fromTop="0" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Members.cshtml" caret="68" fromTop="7" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="1354" fromTop="11" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:About.cshtml" caret="541" fromTop="5" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="6212" fromTop="17" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:FancyBoxExample.cshtml" caret="319" fromTop="8" />
   </RecentFiles>
   <RecentEdits>
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="24578" fromTop="9" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="25274" fromTop="19" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="26010" fromTop="14" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="26770" fromTop="9" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="27466" fromTop="19" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="6814" fromTop="10" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="7382" fromTop="15" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="8224" fromTop="15" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="7799" fromTop="9" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="8838" fromTop="16" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="9445" fromTop="11" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="10234" fromTop="11" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="10785" fromTop="18" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="41" fromTop="3" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="18732" fromTop="24" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="11107" fromTop="10" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="11016" fromTop="4" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="2344" fromTop="4" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="5995" fromTop="21" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Members.cshtml" caret="68" fromTop="7" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_Layout.cshtml" caret="2124" fromTop="13" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_Layout.cshtml" caret="2288" fromTop="17" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:About.cshtml" caret="70" fromTop="3" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:About.cshtml" caret="131" fromTop="6" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="901" fromTop="20" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:About.cshtml" caret="511" fromTop="23" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:About.cshtml" caret="282" fromTop="13" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/f:Web.config" caret="5734" fromTop="14" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/f:Web.config" caret="5734" fromTop="15" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="923" fromTop="4" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:About.cshtml" caret="286" fromTop="15" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_Layout.cshtml" caret="1226" fromTop="10" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_Layout.cshtml" caret="2989" fromTop="24" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_Layout.cshtml" caret="2409" fromTop="22" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="627" fromTop="16" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="44" fromTop="1" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="494" fromTop="4" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="717" fromTop="30" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/f:Web.config" caret="2344" fromTop="19" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/f:Web.config" caret="1329" fromTop="13" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="1262" fromTop="17" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_Layout.cshtml" caret="1611" fromTop="4" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:AjaxPage.cshtml" caret="616" fromTop="4" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:AjaxPage.cshtml" caret="261" fromTop="7" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="1146" fromTop="12" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:AjaxPage.cshtml" caret="465" fromTop="15" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:About.cshtml" caret="541" fromTop="7" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="1358" fromTop="11" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:About.cshtml" caret="541" fromTop="5" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="8554" fromTop="9" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:FancyBoxExample.cshtml" caret="209" fromTop="7" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:FancyBoxExample.cshtml" caret="492" fromTop="17" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:FancyBoxExample.cshtml" caret="75" fromTop="3" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="5522" fromTop="10" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="5548" fromTop="10" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:FancyBoxExample.cshtml" caret="826" fromTop="9" />
   </RecentEdits>
 </RecentFiles>
