@@ -14,3 +14,15 @@ C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\EntityFram
 C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\obj\Debug\YouTubeMvc3.csprojResolveAssemblyReference.cache
 C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\obj\Debug\YouTubeMvc3.dll
 C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\obj\Debug\YouTubeMvc3.pdb
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\Newtonsoft.Json.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\System.Net.Http.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\System.Net.Http.Formatting.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\System.Net.Http.WebRequest.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\System.Web.Http.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\System.Web.Http.WebHost.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\Newtonsoft.Json.xml
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\System.Net.Http.xml
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\System.Net.Http.Formatting.xml
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\System.Net.Http.WebRequest.xml
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\System.Web.Http.xml
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\YouTubeMvc3\bin\System.Web.Http.WebHost.xml

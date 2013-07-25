@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "WebApiPostData";
+}
+<script type="text/javascript">
+  
+    function AddEmployee() {
+        jQuery.support.cors = true;
+        var employee = {
+            Name: $('#txtName').val(),
+            Department: $('#txtDepartment').val()
+        };
+
+        $.ajax({
+            url: 'http://localhost:49475/api/AdventureWorks',
+            type: 'POST',
+            data: JSON.stringify(employee),
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                
+            },
+            error: function (x, y, z) {
+               
+            }
+        });
+    }
+</script>
+
+<div style="margin-left: 50px">
+<h2>Web Api Post Data Example</h2>
+<b>Name</b><br/>
+    <input type="text" id="txtName"/><br/>
+
+<b>Department</b><br/>
+    <input type="text" id="txtDepartment"/><br/>
+
+<input type="button" value="Save" onclick="AddEmployee()"/></div><br/><br/>

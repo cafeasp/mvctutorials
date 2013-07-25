@@ -57,5 +57,10 @@ namespace YouTubeMvc3.Controllers
         {
             return View();
         }
+
+        public ActionResult WebApiPostData()
+        {
+            return View();
+        }
     }
 }

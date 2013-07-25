@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AdventureDb" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="AdventureDbContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SalesOrderHeaders" EntityType="AdventureDb.SalesOrderHeader" />
+    <EntitySet Name="YouTubeWebApi" EntityType="AdventureDb.YouTubeWebApi" />
+  </EntityContainer>
+  <EntityType Name="SalesOrderHeader">
+    <Key>
+      <PropertyRef Name="SalesOrderID" />
+    </Key>
+    <Property Type="Int32" Name="SalesOrderID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Byte" Name="RevisionNumber" Nullable="false" />
+    <Property Type="DateTime" Name="OrderDate" Nullable="false" />
+    <Property Type="DateTime" Name="DueDate" Nullable="false" />
+    <Property Type="DateTime" Name="ShipDate" />
+    <Property Type="Byte" Name="Status" Nullable="false" />
+    <Property Type="Boolean" Name="OnlineOrderFlag" Nullable="false" />
+    <Property Type="String" Name="SalesOrderNumber" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="PurchaseOrderNumber" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccountNumber" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="Int32" Name="SalesPersonID" />
+    <Property Type="Int32" Name="TerritoryID" />
+    <Property Type="Int32" Name="BillToAddressID" Nullable="false" />
+    <Property Type="Int32" Name="ShipToAddressID" Nullable="false" />
+    <Property Type="Int32" Name="ShipMethodID" Nullable="false" />
+    <Property Type="Int32" Name="CreditCardID" />
+    <Property Type="String" Name="CreditCardApprovalCode" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CurrencyRateID" />
+    <Property Type="Decimal" Name="SubTotal" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TaxAmt" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Freight" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TotalDue" Nullable="false" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="Comment" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="rowguid" Nullable="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="false" />
+  </EntityType>
+  <EntityType Name="YouTubeWebApi">
+    <Key>
+      <PropertyRef Name="RowId" />
+    </Key>
+    <Property Type="Int32" Name="RowId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Department" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
