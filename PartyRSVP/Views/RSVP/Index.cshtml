@@ -1,0 +1,26 @@
+﻿@model PartyRSVP.Models.GuestRespond
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()   
+    <p>Name:</p>
+    @Html.TextBoxFor(c => c.Name)<br/>
+    @Html.ValidationMessageFor(c=>c.Name,"Please enter your name")
+    <p>Email:</p>
+    @Html.TextBoxFor(c => c.Email)<br/>  
+     @Html.ValidationMessageFor(c => c.Email, "Please enter your Email") 
+    <p>Phone</p>
+    @Html.TextBoxFor(c => c.Phone)<br/>
+     @Html.ValidationMessageFor(c => c.Phone, "Please enter your Phone")
+    <p>Will show up?</p>
+    @Html.DropDownListFor(c => c.Attend, new[]{new SelectListItem()
+                                                       {
+                                                           Text = "Yes, I'm going",Value = bool.TrueString
+                                                       },new SelectListItem()
+                                                             {
+                                                                 Text="No",Value = bool.FalseString
+                                                             } }, "Choose an option")<br/><br/>
+    <input type="submit" value="Submit RSVP"/>
+}
