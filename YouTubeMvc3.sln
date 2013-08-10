@@ -2,8 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeMvc3", "YouTubeMvc3\YouTubeMvc3.csproj", "{B0461282-28CD-42E8-8EF2-D033E4830E7D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F56E910-E169-4ED9-A63D-FA75CC8D1C51} = {2F56E910-E169-4ED9-A63D-FA75CC8D1C51}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyRSVP", "PartyRSVP\PartyRSVP.csproj", "{F555DC70-F8F0-4102-8000-53EADDA12F92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceLib", "WcfServiceLib\WcfServiceLib.csproj", "{2F56E910-E169-4ED9-A63D-FA75CC8D1C51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +24,10 @@ Global
 		{F555DC70-F8F0-4102-8000-53EADDA12F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F555DC70-F8F0-4102-8000-53EADDA12F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F555DC70-F8F0-4102-8000-53EADDA12F92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F56E910-E169-4ED9-A63D-FA75CC8D1C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F56E910-E169-4ED9-A63D-FA75CC8D1C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F56E910-E169-4ED9-A63D-FA75CC8D1C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F56E910-E169-4ED9-A63D-FA75CC8D1C51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

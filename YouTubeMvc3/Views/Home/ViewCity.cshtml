@@ -1,0 +1,15 @@
+﻿@using YouTubeMvc3.ServiceReferenceAddress
+
+@model List<MyAddress>
+           
+@{
+    ViewBag.Title = "ViewCity";
+}
+
+<h2>View Cities</h2>
+@{
+    foreach (MyAddress address in Model)
+    {
+        <li>@address.Address1 @address.City</li>
+    }
+}

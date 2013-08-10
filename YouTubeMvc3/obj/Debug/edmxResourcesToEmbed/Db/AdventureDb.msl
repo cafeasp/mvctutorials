@@ -44,5 +44,36 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Address">
+      <EntityTypeMapping TypeName="AdventureDb.Address">
+        <MappingFragment StoreEntitySet="Address">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="StateProvinceID" ColumnName="StateProvinceID" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesOrderDetail">
+      <EntityTypeMapping TypeName="AdventureDb.SalesOrderDetail">
+        <MappingFragment StoreEntitySet="SalesOrderDetail">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="LineTotal" ColumnName="LineTotal" />
+          <ScalarProperty Name="UnitPriceDiscount" ColumnName="UnitPriceDiscount" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="SpecialOfferID" ColumnName="SpecialOfferID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderQty" ColumnName="OrderQty" />
+          <ScalarProperty Name="CarrierTrackingNumber" ColumnName="CarrierTrackingNumber" />
+          <ScalarProperty Name="SalesOrderDetailID" ColumnName="SalesOrderDetailID" />
+          <ScalarProperty Name="SalesOrderID" ColumnName="SalesOrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -17,6 +17,14 @@ using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
+#region EDM Relationship Metadata
+
+[assembly: EdmRelationshipAttribute("AdventureDb", "FK_SalesOrderHeader_Address_BillToAddressID", "Address", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(YouTubeMvc3.Db.Address), "SalesOrderHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(YouTubeMvc3.Db.SalesOrderHeader), true)]
+[assembly: EdmRelationshipAttribute("AdventureDb", "FK_SalesOrderHeader_Address_ShipToAddressID", "Address", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(YouTubeMvc3.Db.Address), "SalesOrderHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(YouTubeMvc3.Db.SalesOrderHeader), true)]
+[assembly: EdmRelationshipAttribute("AdventureDb", "FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID", "SalesOrderHeader", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(YouTubeMvc3.Db.SalesOrderHeader), "SalesOrderDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(YouTubeMvc3.Db.SalesOrderDetail), true)]
+
+#endregion
+
 namespace YouTubeMvc3.Db
 {
     #region Contexts
@@ -96,6 +104,38 @@ namespace YouTubeMvc3.Db
             }
         }
         private ObjectSet<YouTubeWebApi> _YouTubeWebApi;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Address> Address
+        {
+            get
+            {
+                if ((_Address == null))
+                {
+                    _Address = base.CreateObjectSet<Address>("Address");
+                }
+                return _Address;
+            }
+        }
+        private ObjectSet<Address> _Address;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<SalesOrderDetail> SalesOrderDetail
+        {
+            get
+            {
+                if ((_SalesOrderDetail == null))
+                {
+                    _SalesOrderDetail = base.CreateObjectSet<SalesOrderDetail>("SalesOrderDetail");
+                }
+                return _SalesOrderDetail;
+            }
+        }
+        private ObjectSet<SalesOrderDetail> _SalesOrderDetail;
 
         #endregion
 
@@ -116,6 +156,22 @@ namespace YouTubeMvc3.Db
         {
             base.AddObject("YouTubeWebApi", youTubeWebApi);
         }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Address EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToAddress(Address address)
+        {
+            base.AddObject("Address", address);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the SalesOrderDetail EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToSalesOrderDetail(SalesOrderDetail salesOrderDetail)
+        {
+            base.AddObject("SalesOrderDetail", salesOrderDetail);
+        }
 
         #endregion
 
@@ -124,6 +180,651 @@ namespace YouTubeMvc3.Db
     #endregion
 
     #region Entities
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="AdventureDb", Name="Address")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Address : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Address object.
+        /// </summary>
+        /// <param name="addressID">Initial value of the AddressID property.</param>
+        /// <param name="addressLine1">Initial value of the AddressLine1 property.</param>
+        /// <param name="city">Initial value of the City property.</param>
+        /// <param name="stateProvinceID">Initial value of the StateProvinceID property.</param>
+        /// <param name="postalCode">Initial value of the PostalCode property.</param>
+        /// <param name="rowguid">Initial value of the rowguid property.</param>
+        /// <param name="modifiedDate">Initial value of the ModifiedDate property.</param>
+        public static Address CreateAddress(global::System.Int32 addressID, global::System.String addressLine1, global::System.String city, global::System.Int32 stateProvinceID, global::System.String postalCode, global::System.Guid rowguid, global::System.DateTime modifiedDate)
+        {
+            Address address = new Address();
+            address.AddressID = addressID;
+            address.AddressLine1 = addressLine1;
+            address.City = city;
+            address.StateProvinceID = stateProvinceID;
+            address.PostalCode = postalCode;
+            address.rowguid = rowguid;
+            address.ModifiedDate = modifiedDate;
+            return address;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 AddressID
+        {
+            get
+            {
+                return _AddressID;
+            }
+            set
+            {
+                if (_AddressID != value)
+                {
+                    OnAddressIDChanging(value);
+                    ReportPropertyChanging("AddressID");
+                    _AddressID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AddressID");
+                    OnAddressIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _AddressID;
+        partial void OnAddressIDChanging(global::System.Int32 value);
+        partial void OnAddressIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String AddressLine1
+        {
+            get
+            {
+                return _AddressLine1;
+            }
+            set
+            {
+                OnAddressLine1Changing(value);
+                ReportPropertyChanging("AddressLine1");
+                _AddressLine1 = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("AddressLine1");
+                OnAddressLine1Changed();
+            }
+        }
+        private global::System.String _AddressLine1;
+        partial void OnAddressLine1Changing(global::System.String value);
+        partial void OnAddressLine1Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String AddressLine2
+        {
+            get
+            {
+                return _AddressLine2;
+            }
+            set
+            {
+                OnAddressLine2Changing(value);
+                ReportPropertyChanging("AddressLine2");
+                _AddressLine2 = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("AddressLine2");
+                OnAddressLine2Changed();
+            }
+        }
+        private global::System.String _AddressLine2;
+        partial void OnAddressLine2Changing(global::System.String value);
+        partial void OnAddressLine2Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String City
+        {
+            get
+            {
+                return _City;
+            }
+            set
+            {
+                OnCityChanging(value);
+                ReportPropertyChanging("City");
+                _City = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("City");
+                OnCityChanged();
+            }
+        }
+        private global::System.String _City;
+        partial void OnCityChanging(global::System.String value);
+        partial void OnCityChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 StateProvinceID
+        {
+            get
+            {
+                return _StateProvinceID;
+            }
+            set
+            {
+                OnStateProvinceIDChanging(value);
+                ReportPropertyChanging("StateProvinceID");
+                _StateProvinceID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("StateProvinceID");
+                OnStateProvinceIDChanged();
+            }
+        }
+        private global::System.Int32 _StateProvinceID;
+        partial void OnStateProvinceIDChanging(global::System.Int32 value);
+        partial void OnStateProvinceIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String PostalCode
+        {
+            get
+            {
+                return _PostalCode;
+            }
+            set
+            {
+                OnPostalCodeChanging(value);
+                ReportPropertyChanging("PostalCode");
+                _PostalCode = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("PostalCode");
+                OnPostalCodeChanged();
+            }
+        }
+        private global::System.String _PostalCode;
+        partial void OnPostalCodeChanging(global::System.String value);
+        partial void OnPostalCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid rowguid
+        {
+            get
+            {
+                return _rowguid;
+            }
+            set
+            {
+                OnrowguidChanging(value);
+                ReportPropertyChanging("rowguid");
+                _rowguid = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("rowguid");
+                OnrowguidChanged();
+            }
+        }
+        private global::System.Guid _rowguid;
+        partial void OnrowguidChanging(global::System.Guid value);
+        partial void OnrowguidChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ModifiedDate
+        {
+            get
+            {
+                return _ModifiedDate;
+            }
+            set
+            {
+                OnModifiedDateChanging(value);
+                ReportPropertyChanging("ModifiedDate");
+                _ModifiedDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedDate");
+                OnModifiedDateChanged();
+            }
+        }
+        private global::System.DateTime _ModifiedDate;
+        partial void OnModifiedDateChanging(global::System.DateTime value);
+        partial void OnModifiedDateChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("AdventureDb", "FK_SalesOrderHeader_Address_BillToAddressID", "SalesOrderHeader")]
+        public EntityCollection<SalesOrderHeader> SalesOrderHeader
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SalesOrderHeader>("AdventureDb.FK_SalesOrderHeader_Address_BillToAddressID", "SalesOrderHeader");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SalesOrderHeader>("AdventureDb.FK_SalesOrderHeader_Address_BillToAddressID", "SalesOrderHeader", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("AdventureDb", "FK_SalesOrderHeader_Address_ShipToAddressID", "SalesOrderHeader")]
+        public EntityCollection<SalesOrderHeader> SalesOrderHeader1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SalesOrderHeader>("AdventureDb.FK_SalesOrderHeader_Address_ShipToAddressID", "SalesOrderHeader");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SalesOrderHeader>("AdventureDb.FK_SalesOrderHeader_Address_ShipToAddressID", "SalesOrderHeader", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="AdventureDb", Name="SalesOrderDetail")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SalesOrderDetail : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new SalesOrderDetail object.
+        /// </summary>
+        /// <param name="salesOrderID">Initial value of the SalesOrderID property.</param>
+        /// <param name="salesOrderDetailID">Initial value of the SalesOrderDetailID property.</param>
+        /// <param name="orderQty">Initial value of the OrderQty property.</param>
+        /// <param name="productID">Initial value of the ProductID property.</param>
+        /// <param name="specialOfferID">Initial value of the SpecialOfferID property.</param>
+        /// <param name="unitPrice">Initial value of the UnitPrice property.</param>
+        /// <param name="unitPriceDiscount">Initial value of the UnitPriceDiscount property.</param>
+        /// <param name="lineTotal">Initial value of the LineTotal property.</param>
+        /// <param name="rowguid">Initial value of the rowguid property.</param>
+        /// <param name="modifiedDate">Initial value of the ModifiedDate property.</param>
+        public static SalesOrderDetail CreateSalesOrderDetail(global::System.Int32 salesOrderID, global::System.Int32 salesOrderDetailID, global::System.Int16 orderQty, global::System.Int32 productID, global::System.Int32 specialOfferID, global::System.Decimal unitPrice, global::System.Decimal unitPriceDiscount, global::System.Decimal lineTotal, global::System.Guid rowguid, global::System.DateTime modifiedDate)
+        {
+            SalesOrderDetail salesOrderDetail = new SalesOrderDetail();
+            salesOrderDetail.SalesOrderID = salesOrderID;
+            salesOrderDetail.SalesOrderDetailID = salesOrderDetailID;
+            salesOrderDetail.OrderQty = orderQty;
+            salesOrderDetail.ProductID = productID;
+            salesOrderDetail.SpecialOfferID = specialOfferID;
+            salesOrderDetail.UnitPrice = unitPrice;
+            salesOrderDetail.UnitPriceDiscount = unitPriceDiscount;
+            salesOrderDetail.LineTotal = lineTotal;
+            salesOrderDetail.rowguid = rowguid;
+            salesOrderDetail.ModifiedDate = modifiedDate;
+            return salesOrderDetail;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 SalesOrderID
+        {
+            get
+            {
+                return _SalesOrderID;
+            }
+            set
+            {
+                if (_SalesOrderID != value)
+                {
+                    OnSalesOrderIDChanging(value);
+                    ReportPropertyChanging("SalesOrderID");
+                    _SalesOrderID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("SalesOrderID");
+                    OnSalesOrderIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _SalesOrderID;
+        partial void OnSalesOrderIDChanging(global::System.Int32 value);
+        partial void OnSalesOrderIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 SalesOrderDetailID
+        {
+            get
+            {
+                return _SalesOrderDetailID;
+            }
+            set
+            {
+                if (_SalesOrderDetailID != value)
+                {
+                    OnSalesOrderDetailIDChanging(value);
+                    ReportPropertyChanging("SalesOrderDetailID");
+                    _SalesOrderDetailID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("SalesOrderDetailID");
+                    OnSalesOrderDetailIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _SalesOrderDetailID;
+        partial void OnSalesOrderDetailIDChanging(global::System.Int32 value);
+        partial void OnSalesOrderDetailIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CarrierTrackingNumber
+        {
+            get
+            {
+                return _CarrierTrackingNumber;
+            }
+            set
+            {
+                OnCarrierTrackingNumberChanging(value);
+                ReportPropertyChanging("CarrierTrackingNumber");
+                _CarrierTrackingNumber = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CarrierTrackingNumber");
+                OnCarrierTrackingNumberChanged();
+            }
+        }
+        private global::System.String _CarrierTrackingNumber;
+        partial void OnCarrierTrackingNumberChanging(global::System.String value);
+        partial void OnCarrierTrackingNumberChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int16 OrderQty
+        {
+            get
+            {
+                return _OrderQty;
+            }
+            set
+            {
+                OnOrderQtyChanging(value);
+                ReportPropertyChanging("OrderQty");
+                _OrderQty = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("OrderQty");
+                OnOrderQtyChanged();
+            }
+        }
+        private global::System.Int16 _OrderQty;
+        partial void OnOrderQtyChanging(global::System.Int16 value);
+        partial void OnOrderQtyChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ProductID
+        {
+            get
+            {
+                return _ProductID;
+            }
+            set
+            {
+                OnProductIDChanging(value);
+                ReportPropertyChanging("ProductID");
+                _ProductID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ProductID");
+                OnProductIDChanged();
+            }
+        }
+        private global::System.Int32 _ProductID;
+        partial void OnProductIDChanging(global::System.Int32 value);
+        partial void OnProductIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 SpecialOfferID
+        {
+            get
+            {
+                return _SpecialOfferID;
+            }
+            set
+            {
+                OnSpecialOfferIDChanging(value);
+                ReportPropertyChanging("SpecialOfferID");
+                _SpecialOfferID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("SpecialOfferID");
+                OnSpecialOfferIDChanged();
+            }
+        }
+        private global::System.Int32 _SpecialOfferID;
+        partial void OnSpecialOfferIDChanging(global::System.Int32 value);
+        partial void OnSpecialOfferIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal UnitPrice
+        {
+            get
+            {
+                return _UnitPrice;
+            }
+            set
+            {
+                OnUnitPriceChanging(value);
+                ReportPropertyChanging("UnitPrice");
+                _UnitPrice = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("UnitPrice");
+                OnUnitPriceChanged();
+            }
+        }
+        private global::System.Decimal _UnitPrice;
+        partial void OnUnitPriceChanging(global::System.Decimal value);
+        partial void OnUnitPriceChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal UnitPriceDiscount
+        {
+            get
+            {
+                return _UnitPriceDiscount;
+            }
+            set
+            {
+                OnUnitPriceDiscountChanging(value);
+                ReportPropertyChanging("UnitPriceDiscount");
+                _UnitPriceDiscount = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("UnitPriceDiscount");
+                OnUnitPriceDiscountChanged();
+            }
+        }
+        private global::System.Decimal _UnitPriceDiscount;
+        partial void OnUnitPriceDiscountChanging(global::System.Decimal value);
+        partial void OnUnitPriceDiscountChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal LineTotal
+        {
+            get
+            {
+                return _LineTotal;
+            }
+            set
+            {
+                OnLineTotalChanging(value);
+                ReportPropertyChanging("LineTotal");
+                _LineTotal = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("LineTotal");
+                OnLineTotalChanged();
+            }
+        }
+        private global::System.Decimal _LineTotal;
+        partial void OnLineTotalChanging(global::System.Decimal value);
+        partial void OnLineTotalChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid rowguid
+        {
+            get
+            {
+                return _rowguid;
+            }
+            set
+            {
+                OnrowguidChanging(value);
+                ReportPropertyChanging("rowguid");
+                _rowguid = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("rowguid");
+                OnrowguidChanged();
+            }
+        }
+        private global::System.Guid _rowguid;
+        partial void OnrowguidChanging(global::System.Guid value);
+        partial void OnrowguidChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ModifiedDate
+        {
+            get
+            {
+                return _ModifiedDate;
+            }
+            set
+            {
+                OnModifiedDateChanging(value);
+                ReportPropertyChanging("ModifiedDate");
+                _ModifiedDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedDate");
+                OnModifiedDateChanged();
+            }
+        }
+        private global::System.DateTime _ModifiedDate;
+        partial void OnModifiedDateChanging(global::System.DateTime value);
+        partial void OnModifiedDateChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("AdventureDb", "FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID", "SalesOrderHeader")]
+        public SalesOrderHeader SalesOrderHeader
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SalesOrderHeader>("AdventureDb.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID", "SalesOrderHeader").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SalesOrderHeader>("AdventureDb.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID", "SalesOrderHeader").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<SalesOrderHeader> SalesOrderHeaderReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SalesOrderHeader>("AdventureDb.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID", "SalesOrderHeader");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SalesOrderHeader>("AdventureDb.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID", "SalesOrderHeader", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
     
     /// <summary>
     /// No Metadata Documentation available.
@@ -812,6 +1513,108 @@ namespace YouTubeMvc3.Db
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("AdventureDb", "FK_SalesOrderHeader_Address_BillToAddressID", "Address")]
+        public Address Address
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Address>("AdventureDb.FK_SalesOrderHeader_Address_BillToAddressID", "Address").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Address>("AdventureDb.FK_SalesOrderHeader_Address_BillToAddressID", "Address").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Address> AddressReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Address>("AdventureDb.FK_SalesOrderHeader_Address_BillToAddressID", "Address");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Address>("AdventureDb.FK_SalesOrderHeader_Address_BillToAddressID", "Address", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("AdventureDb", "FK_SalesOrderHeader_Address_ShipToAddressID", "Address")]
+        public Address Address1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Address>("AdventureDb.FK_SalesOrderHeader_Address_ShipToAddressID", "Address").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Address>("AdventureDb.FK_SalesOrderHeader_Address_ShipToAddressID", "Address").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Address> Address1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Address>("AdventureDb.FK_SalesOrderHeader_Address_ShipToAddressID", "Address");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Address>("AdventureDb.FK_SalesOrderHeader_Address_ShipToAddressID", "Address", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("AdventureDb", "FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID", "SalesOrderDetail")]
+        public EntityCollection<SalesOrderDetail> SalesOrderDetail
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SalesOrderDetail>("AdventureDb.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID", "SalesOrderDetail");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SalesOrderDetail>("AdventureDb.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID", "SalesOrderDetail", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
     
     /// <summary>

@@ -1,0 +1,5 @@
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\WcfServiceLib\bin\Debug\WcfServiceLib.dll.config
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\WcfServiceLib\bin\Debug\WcfServiceLib.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\WcfServiceLib\bin\Debug\WcfServiceLib.pdb
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\WcfServiceLib\obj\Debug\WcfServiceLib.dll
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\WcfServiceLib\obj\Debug\WcfServiceLib.pdb

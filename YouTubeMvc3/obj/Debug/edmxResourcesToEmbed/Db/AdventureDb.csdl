@@ -3,6 +3,20 @@
   <EntityContainer Name="AdventureDbContainer" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="SalesOrderHeaders" EntityType="AdventureDb.SalesOrderHeader" />
     <EntitySet Name="YouTubeWebApi" EntityType="AdventureDb.YouTubeWebApi" />
+    <EntitySet Name="Address" EntityType="AdventureDb.Address" />
+    <EntitySet Name="SalesOrderDetail" EntityType="AdventureDb.SalesOrderDetail" />
+    <AssociationSet Name="FK_SalesOrderHeader_Address_BillToAddressID" Association="AdventureDb.FK_SalesOrderHeader_Address_BillToAddressID">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderHeader_Address_ShipToAddressID" Association="AdventureDb.FK_SalesOrderHeader_Address_ShipToAddressID">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" Association="AdventureDb.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeaders" />
+      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetail" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="SalesOrderHeader">
     <Key>
@@ -34,6 +48,9 @@
     <Property Type="String" Name="Comment" MaxLength="128" FixedLength="false" Unicode="true" />
     <Property Type="Guid" Name="rowguid" Nullable="false" />
     <Property Type="DateTime" Name="ModifiedDate" Nullable="false" />
+    <NavigationProperty Name="Address" Relationship="AdventureDb.FK_SalesOrderHeader_Address_BillToAddressID" FromRole="SalesOrderHeader" ToRole="Address" />
+    <NavigationProperty Name="Address1" Relationship="AdventureDb.FK_SalesOrderHeader_Address_ShipToAddressID" FromRole="SalesOrderHeader" ToRole="Address" />
+    <NavigationProperty Name="SalesOrderDetail" Relationship="AdventureDb.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" FromRole="SalesOrderHeader" ToRole="SalesOrderDetail" />
   </EntityType>
   <EntityType Name="YouTubeWebApi">
     <Key>
@@ -43,4 +60,73 @@
     <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Type="String" Name="Department" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Type="Int32" Name="AddressID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="AddressLine1" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AddressLine2" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="StateProvinceID" Nullable="false" />
+    <Property Type="String" Name="PostalCode" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="rowguid" Nullable="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="false" />
+    <NavigationProperty Name="SalesOrderHeader" Relationship="AdventureDb.FK_SalesOrderHeader_Address_BillToAddressID" FromRole="Address" ToRole="SalesOrderHeader" />
+    <NavigationProperty Name="SalesOrderHeader1" Relationship="AdventureDb.FK_SalesOrderHeader_Address_ShipToAddressID" FromRole="Address" ToRole="SalesOrderHeader" />
+  </EntityType>
+  <EntityType Name="SalesOrderDetail">
+    <Key>
+      <PropertyRef Name="SalesOrderID" />
+      <PropertyRef Name="SalesOrderDetailID" />
+    </Key>
+    <Property Type="Int32" Name="SalesOrderID" Nullable="false" />
+    <Property Type="Int32" Name="SalesOrderDetailID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CarrierTrackingNumber" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="OrderQty" Nullable="false" />
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="Int32" Name="SpecialOfferID" Nullable="false" />
+    <Property Type="Decimal" Name="UnitPrice" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="UnitPriceDiscount" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="LineTotal" Nullable="false" Precision="38" Scale="6" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="Guid" Name="rowguid" Nullable="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="false" />
+    <NavigationProperty Name="SalesOrderHeader" Relationship="AdventureDb.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" FromRole="SalesOrderDetail" ToRole="SalesOrderHeader" />
+  </EntityType>
+  <Association Name="FK_SalesOrderHeader_Address_BillToAddressID">
+    <End Type="AdventureDb.Address" Role="Address" Multiplicity="1" />
+    <End Type="AdventureDb.SalesOrderHeader" Role="SalesOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="SalesOrderHeader">
+        <PropertyRef Name="BillToAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderHeader_Address_ShipToAddressID">
+    <End Type="AdventureDb.Address" Role="Address" Multiplicity="1" />
+    <End Type="AdventureDb.SalesOrderHeader" Role="SalesOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="SalesOrderHeader">
+        <PropertyRef Name="ShipToAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
+    <End Type="AdventureDb.SalesOrderHeader" Role="SalesOrderHeader" Multiplicity="1" />
+    <End Type="AdventureDb.SalesOrderDetail" Role="SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrderHeader">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdventureWorks2008R2Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AdventureWorks2008R2ModelStoreContainer">
+    <EntitySet Name="Address" EntityType="AdventureWorks2008R2Model.Store.Address" store:Type="Tables" Schema="Person" />
+    <EntitySet Name="SalesOrderDetail" EntityType="AdventureWorks2008R2Model.Store.SalesOrderDetail" store:Type="Tables" Schema="Sales" />
+    <EntitySet Name="SalesOrderHeader" EntityType="AdventureWorks2008R2Model.Store.SalesOrderHeader" store:Type="Tables" Schema="Sales" />
+    <AssociationSet Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" Association="AdventureWorks2008R2Model.Store.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeader" />
+      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderHeader_Address_BillToAddressID" Association="AdventureWorks2008R2Model.Store.FK_SalesOrderHeader_Address_BillToAddressID">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderHeader_Address_ShipToAddressID" Association="AdventureWorks2008R2Model.Store.FK_SalesOrderHeader_Address_ShipToAddressID">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeader" />
+    </AssociationSet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported for the target .NET Framework version. The column 'SpatialLocation' in the table 'AdventureWorks2008R2.Person.Address' was excluded from the model. To use the data type 'geography', target the .NET Framework 4.5 or higher.
+      -->
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Name="AddressID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AddressLine1" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="AddressLine2" Type="nvarchar" MaxLength="60" />
+    <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="StateProvinceID" Type="int" Nullable="false" />
+    <Property Name="PostalCode" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalesOrderDetail">
+    <Key>
+      <PropertyRef Name="SalesOrderID" />
+      <PropertyRef Name="SalesOrderDetailID" />
+    </Key>
+    <Property Name="SalesOrderID" Type="int" Nullable="false" />
+    <Property Name="SalesOrderDetailID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CarrierTrackingNumber" Type="nvarchar" MaxLength="25" />
+    <Property Name="OrderQty" Type="smallint" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="SpecialOfferID" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="money" Nullable="false" />
+    <Property Name="UnitPriceDiscount" Type="money" Nullable="false" />
+    <Property Name="LineTotal" Type="numeric" Nullable="false" Precision="38" Scale="6" StoreGeneratedPattern="Computed" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalesOrderHeader">
+    <Key>
+      <PropertyRef Name="SalesOrderID" />
+    </Key>
+    <Property Name="SalesOrderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RevisionNumber" Type="tinyint" Nullable="false" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="DueDate" Type="datetime" Nullable="false" />
+    <Property Name="ShipDate" Type="datetime" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="OnlineOrderFlag" Type="bit" Nullable="false" />
+    <Property Name="SalesOrderNumber" Type="nvarchar" Nullable="false" MaxLength="25" StoreGeneratedPattern="Computed" />
+    <Property Name="PurchaseOrderNumber" Type="nvarchar" MaxLength="25" />
+    <Property Name="AccountNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="SalesPersonID" Type="int" />
+    <Property Name="TerritoryID" Type="int" />
+    <Property Name="BillToAddressID" Type="int" Nullable="false" />
+    <Property Name="ShipToAddressID" Type="int" Nullable="false" />
+    <Property Name="ShipMethodID" Type="int" Nullable="false" />
+    <Property Name="CreditCardID" Type="int" />
+    <Property Name="CreditCardApprovalCode" Type="varchar" MaxLength="15" />
+    <Property Name="CurrencyRateID" Type="int" />
+    <Property Name="SubTotal" Type="money" Nullable="false" />
+    <Property Name="TaxAmt" Type="money" Nullable="false" />
+    <Property Name="Freight" Type="money" Nullable="false" />
+    <Property Name="TotalDue" Type="money" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="128" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
+    <End Role="SalesOrderHeader" Type="AdventureWorks2008R2Model.Store.SalesOrderHeader" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SalesOrderDetail" Type="AdventureWorks2008R2Model.Store.SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrderHeader">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderHeader_Address_BillToAddressID">
+    <End Role="Address" Type="AdventureWorks2008R2Model.Store.Address" Multiplicity="1" />
+    <End Role="SalesOrderHeader" Type="AdventureWorks2008R2Model.Store.SalesOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="SalesOrderHeader">
+        <PropertyRef Name="BillToAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderHeader_Address_ShipToAddressID">
+    <End Role="Address" Type="AdventureWorks2008R2Model.Store.Address" Multiplicity="1" />
+    <End Role="SalesOrderHeader" Type="AdventureWorks2008R2Model.Store.SalesOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="SalesOrderHeader">
+        <PropertyRef Name="ShipToAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

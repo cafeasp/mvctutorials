@@ -2,7 +2,21 @@
 <Schema Namespace="AdventureDb.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="AdventureDbStoreContainer">
     <EntitySet Name="YouTubeWebApi" EntityType="AdventureDb.Store.YouTubeWebApi" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Address" EntityType="AdventureDb.Store.Address" store:Type="Tables" Schema="Person" />
+    <EntitySet Name="SalesOrderDetail" EntityType="AdventureDb.Store.SalesOrderDetail" store:Type="Tables" Schema="Sales" />
     <EntitySet Name="SalesOrderHeader" EntityType="AdventureDb.Store.SalesOrderHeader" store:Type="Tables" Schema="Sales" />
+    <AssociationSet Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" Association="AdventureDb.Store.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeader" />
+      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderHeader_Address_BillToAddressID" Association="AdventureDb.Store.FK_SalesOrderHeader_Address_BillToAddressID">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderHeader_Address_ShipToAddressID" Association="AdventureDb.Store.FK_SalesOrderHeader_Address_ShipToAddressID">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeader" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="YouTubeWebApi">
     <Key>
@@ -11,6 +25,39 @@
     <Property Name="RowId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="Department" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported for the target .NET Framework version. The column 'SpatialLocation' in the table 'AdventureWorks2008R2.Person.Address' was excluded from the model. To use the data type 'geography', target the .NET Framework 4.5 or higher.
+      -->
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Name="AddressID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AddressLine1" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="AddressLine2" Type="nvarchar" MaxLength="60" />
+    <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="StateProvinceID" Type="int" Nullable="false" />
+    <Property Name="PostalCode" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalesOrderDetail">
+    <Key>
+      <PropertyRef Name="SalesOrderID" />
+      <PropertyRef Name="SalesOrderDetailID" />
+    </Key>
+    <Property Name="SalesOrderID" Type="int" Nullable="false" />
+    <Property Name="SalesOrderDetailID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CarrierTrackingNumber" Type="nvarchar" MaxLength="25" />
+    <Property Name="OrderQty" Type="smallint" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="SpecialOfferID" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="money" Nullable="false" />
+    <Property Name="UnitPriceDiscount" Type="money" Nullable="false" />
+    <Property Name="LineTotal" Type="numeric" Nullable="false" Precision="38" Scale="6" StoreGeneratedPattern="Computed" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="SalesOrderHeader">
     <Key>
@@ -43,4 +90,42 @@
     <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
   </EntityType>
+  <Association Name="FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID">
+    <End Role="SalesOrderHeader" Type="AdventureDb.Store.SalesOrderHeader" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SalesOrderDetail" Type="AdventureDb.Store.SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrderHeader">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderHeader_Address_BillToAddressID">
+    <End Role="Address" Type="AdventureDb.Store.Address" Multiplicity="1" />
+    <End Role="SalesOrderHeader" Type="AdventureDb.Store.SalesOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="SalesOrderHeader">
+        <PropertyRef Name="BillToAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderHeader_Address_ShipToAddressID">
+    <End Role="Address" Type="AdventureDb.Store.Address" Multiplicity="1" />
+    <End Role="SalesOrderHeader" Type="AdventureDb.Store.SalesOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="SalesOrderHeader">
+        <PropertyRef Name="ShipToAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

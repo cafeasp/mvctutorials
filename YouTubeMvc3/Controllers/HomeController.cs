@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using YouTubeMvc3.ServiceReferenceAddress;
+
 namespace YouTubeMvc3.Controllers
 {
     public class HomeController : Controller
@@ -61,6 +63,13 @@ namespace YouTubeMvc3.Controllers
         public ActionResult WebApiPostData()
         {
             return View();
+        }
+
+        public ActionResult ViewCity(string id)
+        {
+            DbServiceClient client = new DbServiceClient();
+            
+            return View(client.GetAddress("Bothell").ToList());
         }
     }
 }

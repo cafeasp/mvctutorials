@@ -27,3 +27,4 @@ C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\PartyRSVP\bin\System.Web.W
 C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\PartyRSVP\bin\System.Web.WebPages.Razor.xml
 C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\PartyRSVP\obj\Debug\PartyRSVP.dll
 C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\PartyRSVP\obj\Debug\PartyRSVP.pdb
+C:\Users\Victor.Pacheco\Documents\GitHub\mvctutorials\PartyRSVP\obj\Debug\PartyRSVP.csprojResolveAssemblyReference.cache

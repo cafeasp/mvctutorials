@@ -1,61 +1,66 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/f:Web.config" caret="1539" fromTop="5" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_Layout.cshtml" caret="0" fromTop="0" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_testLayout.cshtml" caret="132" fromTop="12" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/f:_ViewStart.cshtml" caret="106" fromTop="2" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:Members.cshtml" caret="68" fromTop="7" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:About.cshtml" caret="541" fromTop="5" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Models/f:MySalesOrderHeader.cs" caret="194" fromTop="9" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="8719" fromTop="11" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="1415" fromTop="8" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Content/d:theme/f:style.css" caret="0" fromTop="0" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:AjaxPage.cshtml" caret="0" fromTop="0" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:FancyBoxExample.cshtml" caret="0" fromTop="0" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:AdventureWorksController.cs" caret="1675" fromTop="8" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:WebApiPostData.cshtml" caret="0" fromTop="0" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/f:Global.asax.cs" caret="588" fromTop="0" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:App_Start/f:RouteConfig.cs" caret="511" fromTop="15" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/f:Global.asax.cs" caret="0" fromTop="0" />
     <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/f:_ViewStart.cshtml" caret="40" fromTop="1" />
     <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:Shared/f:_Layout.cshtml" caret="202" fromTop="13" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:AccountController.cs" caret="2101" fromTop="12" />
     <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Account/f:Register.cshtml" caret="0" fromTop="0" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Models/f:GuestRespond.cs" caret="600" fromTop="16" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RSVPController.cs" caret="458" fromTop="18" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Index.cshtml" caret="75" fromTop="4" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Models/f:GuestRespond.cs" caret="624" fromTop="17" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Thanks.cshtml" caret="72" fromTop="4" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Sorry.cshtml" caret="72" fromTop="4" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Index.cshtml" caret="559" fromTop="16" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RSVPController.cs" caret="644" fromTop="13" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/f:Web.config" caret="0" fromTop="0" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/f:Global.asax.cs" caret="0" fromTop="0" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:App_Start/f:RouteConfig.cs" caret="0" fromTop="0" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:App_Start/f:WebApiConfig.cs" caret="483" fromTop="12" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RssFeedController.cs" caret="280" fromTop="6" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:AdventureWorksController.cs" caret="0" fromTop="0" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:SampleDb.Designer.cs" caret="2274" fromTop="12" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:DbService.cs" caret="356" fromTop="10" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:App.config" caret="555" fromTop="12" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:IDbService.cs" caret="810" fromTop="10" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/f:Web.config" caret="0" fromTop="0" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="1726" fromTop="15" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:ViewCity.cshtml" caret="243" fromTop="12" />
   </RecentFiles>
   <RecentEdits>
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Shared/f:_DiversonLayout.cshtml" caret="8719" fromTop="11" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:WebApiPostData.cshtml" caret="358" fromTop="12" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:WebApiPostData.cshtml" caret="938" fromTop="18" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:AdventureWorksController.cs" caret="1971" fromTop="19" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:AdventureWorksController.cs" caret="1676" fromTop="5" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:WebApiPostData.cshtml" caret="81" fromTop="4" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:WebApiPostData.cshtml" caret="265" fromTop="9" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:WebApiPostData.cshtml" caret="624" fromTop="15" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:WebApiPostData.cshtml" caret="672" fromTop="2" />
-    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:WebApiPostData.cshtml" caret="881" fromTop="10" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:App_Start/f:RouteConfig.cs" caret="511" fromTop="15" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:Shared/f:_Layout.cshtml" caret="143" fromTop="9" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/f:_ViewStart.cshtml" caret="8" fromTop="1" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:Shared/f:_Layout.cshtml" caret="202" fromTop="13" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Models/f:GuestRespond.cs" caret="525" fromTop="12" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Index.cshtml" caret="36" fromTop="0" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Index.cshtml" caret="979" fromTop="15" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Index.cshtml" caret="922" fromTop="14" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Models/f:GuestRespond.cs" caret="135" fromTop="5" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Models/f:GuestRespond.cs" caret="480" fromTop="14" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Models/f:GuestRespond.cs" caret="600" fromTop="19" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Index.cshtml" caret="135" fromTop="4" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Index.cshtml" caret="905" fromTop="8" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RSVPController.cs" caret="564" fromTop="20" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RSVPController.cs" caret="137" fromTop="6" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RSVPController.cs" caret="432" fromTop="19" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RSVPController.cs" caret="551" fromTop="25" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Index.cshtml" caret="135" fromTop="5" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Index.cshtml" caret="204" fromTop="9" />
-    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Index.cshtml" caret="75" fromTop="4" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RSVPController.cs" caret="787" fromTop="14" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Thanks.cshtml" caret="72" fromTop="4" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Sorry.cshtml" caret="72" fromTop="4" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Views/d:RSVP/f:Index.cshtml" caret="531" fromTop="9" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RSVPController.cs" caret="653" fromTop="13" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RssFeedController.cs" caret="1917" fromTop="11" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:App_Start/f:WebApiConfig.cs" caret="251" fromTop="4" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:App_Start/f:WebApiConfig.cs" caret="472" fromTop="12" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RssFeedController.cs" caret="2904" fromTop="12" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RssFeedController.cs" caret="3049" fromTop="17" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RssFeedController.cs" caret="1840" fromTop="15" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:Controllers/f:RssFeedController.cs" caret="280" fromTop="12" />
+    <File id="F555DC70-F8F0-4102-8000-53EADDA12F92/d:App_Start/f:WebApiConfig.cs" caret="483" fromTop="12" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:IDbService.cs" caret="389" fromTop="5" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:IDbService.cs" caret="913" fromTop="16" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:DbService.cs" caret="358" fromTop="7" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:DbService.cs" caret="155" fromTop="6" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:App.config" caret="823" fromTop="8" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:App.config" caret="411" fromTop="9" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:IDbService.cs" caret="888" fromTop="15" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:IDbService.cs" caret="860" fromTop="16" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:DbService.cs" caret="1500" fromTop="22" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:App.config" caret="9411" fromTop="12" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="112" fromTop="5" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:DbService.cs" caret="1151" fromTop="10" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="1713" fromTop="13" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:ViewCity.cshtml" caret="81" fromTop="3" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Views/d:Home/f:ViewCity.cshtml" caret="243" fromTop="12" />
+    <File id="B0461282-28CD-42E8-8EF2-D033E4830E7D/d:Controllers/f:HomeController.cs" caret="1563" fromTop="9" />
+    <File id="2F56E910-E169-4ED9-A63D-FA75CC8D1C51/f:IDbService.cs" caret="715" fromTop="8" />
   </RecentEdits>
 </RecentFiles>
